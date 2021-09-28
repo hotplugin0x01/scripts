@@ -39,6 +39,6 @@ while True:
         connection.sendall(info.encode())
         
     # Close connection
-    elif (opt.decode("utf-8") == "2"):
+    elif (opt.decode("utf-8") == "0"):
         connection.close()
         connection, address = s.accept()
