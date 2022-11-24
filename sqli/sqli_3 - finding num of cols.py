@@ -1,6 +1,6 @@
 
 # SQL injection UNION attack, determining the number of columns returned by the query
-
+# Vulnerability in category parameter
 import requests
 import urllib3
 

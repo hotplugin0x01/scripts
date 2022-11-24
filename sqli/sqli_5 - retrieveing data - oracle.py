@@ -1,6 +1,6 @@
 
 # SQL injection attack, listing the database contents on Oracle
-
+# Vulnerability in category parameter
 # Assumptions:
     # We know number of returned columns
     # We know data type returned columns

@@ -1,6 +1,6 @@
 
 # SQL injection UNION attack, retrieving multiple values in a single column
-
+# Vulnerability in category parameter
 # Assumptions:
     # We know number of returned columns
     # We know data type returned columns

